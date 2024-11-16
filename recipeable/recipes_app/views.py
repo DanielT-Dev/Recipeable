@@ -1,4 +1,6 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Recipe
 
-def home(request):
-    return HttpResponse("Hello, World!")
+def index(request):
+    recipes = Recipe.objects.all()  # Fetch all recipes from the database
+    return render(request, 'recipes_app/index.html', {'recipes': recipes})
