@@ -9,48 +9,10 @@
     <link rel="stylesheet" href="{% static 'recipes_app/styles.css' %}">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Recipeable</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Recipes</a></li>
-                <li><a href="">Submit Recipe</a></li>
-                <li><a href="">Login</a></li>
-                <li><a href="">Sign Up</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="intro">
-            <h2>Welcome to Recipeable</h2>
-            <p>Discover, share, and save your favorite recipes.</p>
-        </section>
-
-        <section class="recipes">
-            <h3>Featured Recipes</h3>
-            {% for recipe in recipes %}
-                <div class="recipe-card">
-                    <img src="{{ recipe.image.url }}" alt="Recipe Image">
-                    <h4>{{ recipe.name }}</h4>
-                    <p>{{ recipe.description }}</p>
-                    <a href="{% url 'recipe_detail' recipe.id %}"><button>View Recipe</button></a>
-                </div>
-            {% endfor %}
-        </section>
-
-        <section class="submit-recipe">
-            <h3>Submit Your Own Recipe</h3>
-            <p>Have a delicious recipe to share? Submit it here!</p>
-            <a href=""><button>Submit Recipe</button></a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Recipeable | All rights reserved</p>
-    </footer>
+    <div class="burgers">
+        {% for food in foods %}
+            {% include 'recipes_app/food_card.html' %}
+        {% endfor %}
+    </div>
 </body>
 </html>

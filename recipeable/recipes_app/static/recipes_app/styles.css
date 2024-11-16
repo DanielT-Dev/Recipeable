@@ -53,3 +53,9 @@ button {
 button:hover {
     background-color: #45a049;
 }
+.burgers 
+{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
