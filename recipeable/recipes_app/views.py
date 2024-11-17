@@ -7,7 +7,7 @@ def index(request):
     recipes = Recipe.objects.all()  # Fetch all recipes from the database
     foods = Food.objects.all()
 
-    random_recipes = get_random_recipes(number=3)  # Fetch 3 random recipes
+    random_recipes = [] #get_random_recipes(number=3)  # Fetch 3 random recipes
 
     return render(request, 'recipes_app/index.html', {
         'recipes': recipes,
