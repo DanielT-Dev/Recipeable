@@ -1,0 +1,80 @@
+{% load static %}
+
+<div class="header">
+    <img 
+        src="{% static 'recipes_app/logo1.png' %}"
+        class="logo"
+    />
+    <h1>
+        Recipeable
+    </h1>
+    <img 
+        src="{% static 'recipes_app/search1.png' %}"
+        class="search"
+    />
+    <input
+        type="text"
+        placeholder="Search for a recipe to get started..."
+    />
+    
+</div>
+
+<style>
+    body 
+    {
+        background-color: rgb(250, 245, 235);
+    }
+    .header 
+    {
+        width: 40vw;
+        height: 17vh;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        left: 30vw;
+        top: 5vh;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 1vw;
+    }
+    .header h1 
+    {
+        text-align: center;
+        margin-top: 0.25vh;
+    }
+    .header input 
+    {
+        margin-left: 10%;
+        margin-top: 2.5vh;
+        width: 80%;
+        height: 5vh;
+        border-radius: 10px;
+        border: 2px solid rgba(255,127,80, 0.2);
+        background-color: rgba(255, 245, 230, 0.2);
+        padding-left: 2.2vw;
+        padding-top: 0.3vh;
+        font-size: 1vw;
+        color: rgb(80, 80, 80);
+    }
+    .header input:focus
+    {
+        border: 2px solid rgba(255,127,80, 0.5);
+        outline: none;
+    }
+    .header .search
+    {
+        width: 2.75vh;
+        height: 2.75vh;
+        position: absolute;
+        left: 5.3vw;
+        top: 9.75vh;
+    }
+    .header .logo
+    {
+        width: 5.5vh;
+        height: 5.5vh;
+        position: absolute;
+        left: 11.5vw;
+        top: 1.5vh;
+        border-radius: 10px;
+    }
+</style>

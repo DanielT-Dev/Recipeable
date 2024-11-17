@@ -6,22 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipeable</title>
-    <link rel="stylesheet" href="{% static 'recipes_app/styles.css' %}?v=1.0.1">
+    <link rel="stylesheet" href="{% static 'recipes_app/styles.css' %}?v=1.0.2">
 </head>
 <body>
-    <h1>
-        Featured Recipes
-    </h1>
-    <div class="featured">
-        {% for recipe in random_recipes.recipes %}
-            {% include 'recipes_app/food_card.html' with recipe=recipe %}
-        {% endfor %}
-    </div>
+    
+    {% include 'recipes_app/header.html' %}
 
-    <div class="burgers">
-        {% for food in foods %}
-            {% include 'recipes_app/food_card.html' %}
-        {% endfor %}
-    </div>
 </body>
 </html>
