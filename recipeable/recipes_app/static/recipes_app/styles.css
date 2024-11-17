@@ -74,3 +74,21 @@ button:hover {
     gap: 0px; /* Space between grid items (works in modern browsers) */
     padding: 0px; /* Padding around the container */
 }
+.types 
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 30vw;
+    top: 24vh;
+}
+.main 
+{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 30vw;
+    top: 38vh;
+    width: 42vw;
+    flex-wrap: wrap;
+}

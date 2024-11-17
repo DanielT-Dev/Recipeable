@@ -6,11 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipeable</title>
-    <link rel="stylesheet" href="{% static 'recipes_app/styles.css' %}?v=1.0.2">
+    <link rel="stylesheet" href="{% static 'recipes_app/styles.css' %}?v=1.0.6">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
     {% include 'recipes_app/header.html' %}
 
+    <div class="types">
+        {% include 'recipes_app/list_card.html' with list=saved_recipes_list %}
+        {% include 'recipes_app/list_card.html' with list=popular_recipes_list %}
+        {% include 'recipes_app/list_card.html' with list=new_recipes_list %}
+    </div>
+
+    <div class="main">
+        {% include 'recipes_app/food_card.html' with food=food1%}
+        {% include 'recipes_app/food_card.html' with food=food2%}
+        {% include 'recipes_app/food_card.html' with food=food1%}
+        {% include 'recipes_app/food_card.html' with food=food2%}
+    </div>
+    
 </body>
 </html>
