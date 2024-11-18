@@ -23,8 +23,8 @@
         {% include 'recipes_app/food_card.html' with food=food1%}
         {% include 'recipes_app/food_card.html' with food=food2%}
         
-        {% for food in foods %}
-            {% include 'recipes_app/food_card.html' with food=food%}
+        {% for f in foods %}
+            {% include 'recipes_app/food_card.html' with food=f%}
         {% endfor %}
     </div>
 
