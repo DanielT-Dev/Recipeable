@@ -92,3 +92,12 @@ button:hover {
     width: 42vw;
     flex-wrap: wrap;
 }
+.add_recipe_container
+{
+    position: absolute;
+    left: 2vw;
+    top: 5vh;
+    background: transparent;
+    width: auto;
+    height: auto;
+}
