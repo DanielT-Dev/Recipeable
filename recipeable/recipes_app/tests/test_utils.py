@@ -1,8 +1,8 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from .models import Recipe, Food
-from .forms import FoodForm
-from .views import convert_all_foods_to_objects
+from ..models import Recipe, Food
+from ..forms import FoodForm
+from ..views import convert_all_foods_to_objects
 from unittest.mock import patch  # For mocking
 
 class ConvertAllFoodsToObjectsTest(TestCase):
