@@ -17,11 +17,9 @@ def convert_all_foods_to_objects(foods):
         
     return food_objects
 
-
-
 def index(request):
     recipes = Recipe.objects.all()  # Fetch all recipes from the database
-    foods =     Food.objects.all()
+    foods = Food.objects.all()
 
     random_recipes = [] #get_random_recipes(number=3)  # Fetch 3 random recipes
 
